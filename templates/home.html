@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <title>首页-主机管理系统</title>
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">CMDB主机管理</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ userinfo.username }}</a></li>
+                        <li><a href="/login/"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+                    </ul>
+                </div>
+                <div class="container-fluid">
+                    {% if user.name %}
+                        <p class="text-danger">{{ user.name }}</p>
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-3 column">
+			<div class="panel-group" id="panel-294914">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-294914" href="#panel-element-744657">主机管理</a>
+					</div>
+					<div id="panel-element-744657" class="panel-collapse in">
+                            <div class="panel-body">
+                                <a>所有主机信息</a>
+                            </div>
+                            <div class="panel-body">
+                                <a>添加新主机</a>
+                            </div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-294914" href="#panel-element-420083">用户管理</a>
+					</div>
+					<div id="panel-element-420083" class="panel-collapse collapse">
+						<div class="panel-body">
+							添加用户
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-9 column" style="background-color: chocolate;height: 300px;">
+        </div>
+    </div>
+</div>
+</div>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="/static/js/jquery-1.12.4.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
